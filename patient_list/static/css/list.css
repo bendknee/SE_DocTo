@@ -1,0 +1,24 @@
+.card {
+    margin-top: 10px;
+}
+
+.nav-right {
+    margin: 10px 25px;
+}
+
+.search-btn {
+    margin-left: 10px;
+}
+
+.selector-sort {
+    margin-top: 10px;
+}
+
+.custom-select {
+    margin-top: 10px;
+}
+
+#descOrAsc {
+    margin-bottom: 10px;
+}
+
