@@ -1,0 +1,25 @@
+body {
+    background-color: #efefef !important;
+}
+
+.navbar-color {
+    background-color: #7a02a4;
+    color: #efefef;
+    margin-bottom: 20px;
+}
+
+.nav-link:link, .nav-link:visited, .navbar-brand:link, .navbar-brand:visited {
+    color: #efefef;
+}
+
+.nav-link:hover {
+    /* background-color: darkblue; */
+    padding: 2px 2px;
+}
+
+.footer {
+    background-color: #7a02a4;
+    color: #efefef;
+    margin-top: 10px;
+}
+
