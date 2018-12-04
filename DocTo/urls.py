@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from django.views.generic.base import RedirectView
+from django.conf.urls import url,include
+import jadwal_praktik.urls as jadwal_praktik
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    url('admin/', admin.site.urls),
+    url(r'^jadwal-praktik/', include(('jadwal_praktik.urls','jadwal_praktik'), namespace='jadwal-praktik')),
 ]
