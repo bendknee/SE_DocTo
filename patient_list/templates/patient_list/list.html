@@ -1,18 +1,17 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block static %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/list.css' %}" />
-{% endblock %}
+{% block title %} - Daftar Pasien {% endblock %}
 
 {% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/list.css' %}" />  
 <div class="container-fluid">
           <div class="row">
               <div class="col-8">
                 <div class="card">
                     <!-- <h5 class="card-header">Featured</h5> -->
                     <div class="card-body">
-                      <h5 class="card-title"><a href=#>Nama Pasien</a></h5>
+                      <h5 class="card-title"><a href="{% url 'patient_detail' %}">Nama Pasien</a></h5>
                       <p class="card-text">Konsultasi pada hari sekian, tanggal sekian, pukul sekian wib.</p>
                       <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                     </div>
@@ -20,7 +19,7 @@
                   <div class="card">
                     <!-- <h5 class="card-header">Featured</h5> -->
                     <div class="card-body">
-                      <h5 class="card-title"><a href=#>Nama Pasien</a></h5>
+                      <h5 class="card-title"><a href="{% url 'patient_detail' %}">Nama Pasien</a></h5>
                       <p class="card-text">Konsultasi pada hari sekian, tanggal sekian, pukul sekian wib.</p>
                       <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                     </div>
@@ -28,7 +27,7 @@
                   <div class="card">
                     <!-- <h5 class="card-header">Featured</h5> -->
                     <div class="card-body">
-                      <h5 class="card-title"><a href=#>Nama Pasien</a></h5>
+                      <h5 class="card-title"><a href="{% url 'patient_detail' %}">Nama Pasien</a></h5>
                       <p class="card-text">Konsultasi pada hari sekian, tanggal sekian, pukul sekian wib.</p>
                       <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                     </div>
@@ -36,7 +35,7 @@
                   <div class="card">
                     <!-- <h5 class="card-header">Featured</h5> -->
                     <div class="card-body">
-                      <h5 class="card-title"><a href=#>Nama Pasien</a></h5>
+                      <h5 class="card-title"><a href="{% url 'patient_detail' %}">Nama Pasien</a></h5>
                       <p class="card-text">Konsultasi pada hari sekian, tanggal sekian, pukul sekian wib.</p>
                       <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                     </div>
@@ -44,38 +43,34 @@
                   <div class="card">
                     <!-- <h5 class="card-header">Featured</h5> -->
                     <div class="card-body">
-                      <h5 class="card-title"><a href=#>Nama Pasien</a></h5>
+                      <h5 class="card-title"><a href="{% url 'patient_detail' %}">Nama Pasien</a></h5>
                       <p class="card-text">Konsultasi pada hari sekian, tanggal sekian, pukul sekian wib.</p>
                       <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                     </div>
                   </div>
                   <div class="card">
-                    <!-- <h5 class="card-header">Featured</h5> -->
-                    <div class="card-body">
-                      <h5 class="card-title"><a href=#>Nama Pasien</a></h5>
-                      <p class="card-text">Konsultasi pada hari sekian, tanggal sekian, pukul sekian wib.</p>
-                      <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                      <!-- <h5 class="card-header">Featured</h5> -->
+                      <div class="card-body">
+                        <h5 class="card-title"><a href="{% url 'patient_detail' %}">Nama Pasien</a></h5>
+                        <p class="card-text">Konsultasi pada hari sekian, tanggal sekian, pukul sekian wib.</p>
+                        <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                      </div>
                     </div>
-                  </div>
               </div>
               <div class="col-4">
                   <div class="nav-right">
-                    <form class="form-inline">
+                    <form class="form-inline search">
                         <input class="form-control search-form" type="text" placeholder="Search">
                         <button type="submit" class="btn btn-primary search-btn">Search</button>
                     </form>
-                    <form class="selector-sort">
-                        <label class="my-1 mr-2" for="sortBy">Urutkan menurut:</label>
+                    <label class="my-1 mr-2" for="sortBy">Urutkan menurut:</label>
+                    <form class="selector-sort form-inline">
                         <select class="custom-select" id="sortBy">
                             <option value="1">Status Pasien</option>
                             <option value="2">Nama Pasien</option>
                             <option value="3">Jadwal Konsultasi</option>
                         </select>
-                        <select class="custom-select" id="descOrAsc">
-                            <option value="1">Ascending</option>
-                            <option value="2">Descending</option>
-                        </select>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary select-btn">Submit</button>
                     </form>
                   </div>
               </div>

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} - Detail Pasien {% endblock %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/detail.css' %}" />
+<div class="container-fluid">
+<div class="card">
+    <h1 class="card-header">Nama Pasien</h1>
+    <div class="card-body">
+        <table class="table table-borderless">
+            <tbody>
+                <tr>
+                    <td class="theader">Usia</td>
+                    <td>:</td>
+                    <td>18</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td class="titik2 theader">Nomor Telepon</td>
+                    <td>:</td>
+                    <td>081234567890</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td class="theader">Alamat</td>
+                    <td>:</td>
+                    <td>Jl. terus jadian kaga</td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </div>
+    <a class="btn btn-primary" href="list.html">Batalkan Konsultasi</a>
+</div>
+</div>
+{% endblock %}
