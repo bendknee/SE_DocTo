@@ -1,0 +1,43 @@
+.card {
+    margin-top: 10px;
+}
+
+a:link, a:visited {
+    color: #d312ca;
+}
+
+.nav-right {
+    margin: 10px 25px;
+}
+
+.search-btn {
+    margin-left: 10px;
+    
+}
+
+.search {
+    margin-bottom: 20px;
+    margin-left: 5px;
+}
+.selector-sort {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+label {
+    margin-left: 10px;
+}
+
+.custom-select {
+    margin-top: 10px;
+}
+
+.select-btn {
+    margin-top : 10px;
+    margin-left: 10px;
+}
+
+.btn-primary {
+    background-color: #d312ca;
+    border-color: #d312ca;
+}
