@@ -1,5 +1,6 @@
 body {
     background-color: #efefef !important;
+    padding-bottom: 50px;
 }
 
 .navbar-color {
@@ -18,8 +19,9 @@ body {
 }
 
 .footer {
+    height: 25px;
     background-color: #7a02a4;
     color: #efefef;
-    margin-top: 10px;
+    text-align: center;
 }
 
