@@ -7,9 +7,13 @@ Deployment:
   type: deploy
   before_script:
     - gem install dpl
+    - wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
   script:
     - dpl --provider=heroku --app=$HEROKU_APP_NAME --api-key=$HEROKU_API_KEY
     - export HEROKU_API_KEY=$HEROKU_API_KEY
-  when: manual
+    - heroku run --app $HEROKU_APPNAME migrate
+  environment:
+    name: production
+    url: $HEROKU_APP_HOST
   only:
     - master
