@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} - Membuka Konsultasi {% endblock %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/detail.css' %}" />
+<div class="container-fluid">
+<div class="card" id="2">
+    <h1 class="card-header">Membuka Konsultasi</h1>
+    <div class="card-body">
+        <table class="table table-borderless">
+            <tbody>
+                <form action="" onsubmit="myFunction()" method="POST">
+                    {% csrf_token %}
+                    <tr>
+                        <td class="theader">Hari Praktik</td>
+                        <td>:</td>
+                        <td>
+                            <select name="hari-praktik">
+                                <option value="senin">Senin</option>
+                                <option value="selasa">Selasa</option>
+                                <option value="rabu">Rabu</option>
+                                <option value="kamis">Kamis</option>
+                                <option value="jumat">Jumat</option>
+                                <option value="sabtu">Sabtu</option>
+                                <option value="minggu">Minggu</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="theader">Jam Mulai</td>
+                        <td>:</td>
+                        <td>
+                            <select name="jam-mulai-jam">
+                                <option value="00">00</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                            <select name="jam-mulai-menit">
+                                    <option value="00">00</option>
+                                    <option value="05">05</option>
+                                    <option value="10">10</option>
+                                    <option value="15">15</option>
+                                    <option value="20">20</option>
+                                    <option value="25">25</option>
+                                    <option value="30">30</option>
+                                    <option value="35">35</option>
+                                    <option value="40">40</option>
+                                    <option value="45">45</option>
+                                    <option value="50">50</option>
+                                    <option value="55">55</option>
+                                </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="theader">Jam Selesai</td>
+                        <td>:</td>
+                        <td>
+                            <select name="jam-selesai-jam">
+                                <option value="00">00</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                            <select name="jam-selesai-menit">
+                                    <option value="00">00</option>
+                                    <option value="05">05</option>
+                                    <option value="10">10</option>
+                                    <option value="15">15</option>
+                                    <option value="20">20</option>
+                                    <option value="25">25</option>
+                                    <option value="30">30</option>
+                                    <option value="35">35</option>
+                                    <option value="40">40</option>
+                                    <option value="45">45</option>
+                                    <option value="50">50</option>
+                                    <option value="55">55</option>
+                                </select>
+                            </td>
+                    </tr>
+                    <tr>
+                        <td class="theader">Lokasi Praktik</td>
+                        <td>:</td>
+                        <td>
+                            <input type="text" name="lokasi-praktik" style="width: 500px">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="theader">
+                            <input class="btn btn-primary" type="Submit">
+                        </td>
+                    </tr>
+                </form>
+            </tbody>
+        </table> 
+    </div>
+</div>
+</div>
+
+<script>
+
+    function myFunction() {
+		var close = document.getElementsByClassName("closebtn");
+		var r = confirm("Apakah Anda yakin untuk menyimpan konsultasi?");
+		if (r == true) {
+            
+		}
+	}
+
+</script>
+
+{% endblock %}
