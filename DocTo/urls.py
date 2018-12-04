@@ -20,7 +20,8 @@ from django.conf.urls import url,include
 import jadwal_praktik.urls as jadwal_praktik
 
 urlpatterns = [
-    url('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
+    path('patient/', include('patient_list.urls'))
     url(r'^jadwal-praktik/', include(('jadwal_praktik.urls','jadwal_praktik'), namespace='jadwal-praktik')),
     path('open-consul/', include('open_consul.urls'))
 ]
