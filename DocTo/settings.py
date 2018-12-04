@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'login',
 	'jadwal_praktik',
-    'open_consul'
+    'open_consul',
+    'patient_list'
 ]
 
 MIDDLEWARE = [

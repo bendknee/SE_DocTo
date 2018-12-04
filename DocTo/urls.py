@@ -18,7 +18,6 @@ from django.urls import path, include
 from django.views.generic.base import RedirectView
 from django.conf.urls import url,include
 import jadwal_praktik.urls as jadwal_praktik
-<<<<<<< DocTo/urls.py
 
 urlpatterns = [
     path('admin/', admin.site.urls),
