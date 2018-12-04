@@ -18,10 +18,12 @@ from django.urls import path, include
 from django.views.generic.base import RedirectView
 from django.conf.urls import url,include
 import jadwal_praktik.urls as jadwal_praktik
+<<<<<<< DocTo/urls.py
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('patient/', include('patient_list.urls'))
+    path(r'', include(('login.urls', 'login'), namespace='login')),
+    path('patient/', include('patient_list.urls')),
     url(r'^jadwal-praktik/', include(('jadwal_praktik.urls','jadwal_praktik'), namespace='jadwal-praktik')),
     path('open-consul/', include('open_consul.urls'))
 ]
