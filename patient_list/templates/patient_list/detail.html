@@ -34,7 +34,20 @@
         </table>
         
     </div>
-    <a class="btn btn-primary" href="list.html">Batalkan Konsultasi</a>
+    <a class="btn btn-primary" onclick="myFunction()" >Batalkan Konsultasi</a>
+
+	<script>
+	function myFunction() {
+		var txt;
+		var r = confirm("Apakah Anda yakin untuk membatalkan?");
+		if (r == true) {
+			window.location.href = "{% url 'patient_list' %}";
+		} else {
+			
+		}
+		document.getElementById("demo").innerHTML = txt;
+	}
+	</script>
 </div>
 </div>
 {% endblock %}
