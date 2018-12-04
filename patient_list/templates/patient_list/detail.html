@@ -34,20 +34,26 @@
         </table>
         
     </div>
-    <a class="btn btn-primary" onclick="myFunction()" >Batalkan Konsultasi</a>
-
-	<p id="demo"></p>
+    <a class="btn btn-primary" onclick="batalkan()" >Batalkan Konsultasi</a>
 	
 	<script>
-	function myFunction() {
-		var txt;
+	function batalkan() {
+		
 		var r = confirm("Apakah Anda yakin untuk membatalkan?");
 		if (r == true) {
-			window.location.href = "{% url 'patient_list' %}";
+			alasanBatal()
 		} else {
 			
 		}
-		document.getElementById("demo").innerHTML = txt;
+	}
+	</script>
+	
+	<script>
+	function alasanBatal() {
+		var person = prompt("Alasan membatalkan (kosongkan jika tidak ingin memberi alasan):");
+		if (person != null) {
+			window.location.href = "{% url 'patient_list' %}";
+		}
 	}
 	</script>
 </div>
