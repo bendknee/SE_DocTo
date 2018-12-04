@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'open_consul',
+	'jadwal_praktik',
+    'open_consul'
 ]
 
 MIDDLEWARE = [
