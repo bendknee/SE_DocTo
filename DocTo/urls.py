@@ -16,13 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic.base import RedirectView
-from django.conf.urls import url,include
+from django.conf.urls import url
 import jadwal_praktik.urls as jadwal_praktik
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path(r'', include(('login.urls', 'login'), namespace='login')),
     path('patient/', include('patient_list.urls')),
-    url(r'^jadwal-praktik/', include(('jadwal_praktik.urls','jadwal_praktik'), namespace='jadwal-praktik')),
+    url(r'^jadwal-praktik/', include(('jadwal_praktik.urls', 'jadwal_praktik'), namespace='jadwal-praktik')),
     path('open-consul/', include('open_consul.urls'))
 ]
