@@ -4,7 +4,7 @@ body {
 }
 
 .navbar-color {
-    background-color: #BB1D9D;
+    background-color: #ca009d;
     color: #efefef;
     margin-bottom: 20px;
 }
@@ -19,8 +19,8 @@ body {
 }
 
 .footer {
-    height: 25px;
-    background-color: #BB1D9D;
+    height: 30px;
+    background-color: #ca009d;
     color: #efefef;
     text-align: center;
 }
