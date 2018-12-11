@@ -36,4 +36,5 @@ urlpatterns = [
         url(r'^hapus-kamis/(?P<id>.*)/$', hapus4, name='hapus4'),
         url(r'^hapus-jumat/(?P<id>.*)/$', hapus5, name='hapus5'),
         url(r'^hapus-sabtu/(?P<id>.*)/$', hapus6, name='hapus6'),
-        url(r'^hapus-minggu/(?P<id>.*)/$', hapus7, name='hapus7'),
+        url(r'^hapus-minggu/(?P<id>.*)/$', hapus7, name='hapus7')
+]
