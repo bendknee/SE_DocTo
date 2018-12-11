@@ -7,35 +7,38 @@
 <link rel="stylesheet" type="text/css" href="{% static 'css/detail.css' %}" />
 <div class="container-fluid">
 <div class="card">
-    <h1 class="card-header">Nama Pasien</h1>
+    <h1 class="card-header">{{ patient.name }}</h1>
     <div class="card-body">
         <table class="table table-borderless">
             <tbody>
                 <tr>
                     <td class="theader">Usia</td>
                     <td>:</td>
-                    <td>18</td>
+                    <td>{{ patient.age }}</td>
                 </tr>
             </tbody>
             <tbody>
                 <tr>
                     <td class="titik2 theader">Nomor Telepon</td>
                     <td>:</td>
-                    <td>081234567890</td>
+                    <td>{{ patient.phone }}</td>
                 </tr>
             </tbody>
             <tbody>
                 <tr>
                     <td class="theader">Alamat</td>
                     <td>:</td>
-                    <td>Jl. terus jadian kaga</td>
+                    <td>{{ patient.address }}</td>
                 </tr>
             </tbody>
         </table>
         
     </div>
+    {% if consultation.status %}
     <a class="btn btn-primary" onclick="batalkan()" >Batalkan Konsultasi</a>
-	
+    {% else %}
+    <a class="btn btn-primary" onclick="batalkan() disabled" >Batalkan Konsultasi</a>
+	{% endif %}
 	<script>
 	function batalkan() {
 		
