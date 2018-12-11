@@ -10,7 +10,11 @@
 .btn-primary {
     background-color: #d312ca !important;
     border-color: #d312ca !important;
-    
+}
+
+.btn-primary:disabled, .btn-primary[disabled] {
+    background-color: gray !important;
+    border-color: gray !important;
 }
 
 .card-header {
