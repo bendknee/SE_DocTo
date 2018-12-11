@@ -27,5 +27,5 @@ urlpatterns = [
     path('', RedirectView.as_view(url='/patient/'), name='redirect'),
     path('patient/', include('patient_list.urls')),
     url(r'^jadwal-praktik/', include(('jadwal_praktik.urls', 'jadwal_praktik'), namespace='jadwal-praktik')),
-    path('open-consul/', include('open_consul.urls'))
+    path('open-consul/', include('open_consul.urls', namespace='open_consul'))
 ]

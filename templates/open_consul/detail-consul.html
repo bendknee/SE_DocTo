@@ -13,25 +13,25 @@
         <tr>
             <td class="theader">Hari Praktik</td>
             <td>:</td>
-            <td>Senin</td>
+            <td>{{ hariPraktik }}</td>
         </tr>
         <tr>
             <td class="theader">Jam Mulai</td>
             <td>:</td>
-            <td>00.00</td>
+            <td>{{ jamMulai }}</td>
         </tr>
         <tr>
             <td class="theader">Jam Selesai</td>
             <td>:</td>
-            <td>12.00</td>
+            <td>{{ jamSelesai }}</td>
         </tr>
         <tr>
             <td class="theader">Lokasi Praktik</td>
             <td>:</td>
-            <td>Indonesia</td>
+            <td>{{ lokasiPraktik }}</td>
         </tr>
         </table>
-        <a class="btn btn-primary" onclick="edit()" style="color: white">Edit Konsultasi</a>
+        <a class="btn btn-primary" style="color: white"  href="{% url 'open_consul:open-consul' %}">Edit Konsultasi</a>
 </div>
 </div>
 
