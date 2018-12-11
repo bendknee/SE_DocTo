@@ -35,7 +35,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'login',
     'jadwal_praktik',
     'open_consul',
     'patient_list'
@@ -127,5 +126,3 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 LOGIN_URL = '/login/'
 
 LOGIN_REDIRECT_URL = '/patient/'
-
-LOGOUT_REDIRECT_URL = '/login/'

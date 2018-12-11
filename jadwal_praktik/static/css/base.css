@@ -9,15 +9,6 @@ body {
     margin-bottom: 20px;
 }
 
-.nav-link:link, .nav-link:visited, .navbar-brand:link, .navbar-brand:visited {
-    color: #efefef;
-}
-
-.nav-link:hover {
-    /* background-color: darkblue; */
-    padding: 2px 2px;
-}
-
 .footer {
     height: 30px;
     background-color: #ca009d;
