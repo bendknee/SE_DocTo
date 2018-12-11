@@ -3,13 +3,13 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <title>
         DocTo - Log in
     </title>
     <style>
         body {
-            font-family: SansSerif, Futura, sans-serif;
+            font-family: Century Gothic, sans-serif;
             background-color: #ca009d;
         }
 
@@ -21,7 +21,13 @@
         .container {
             border-radius: 40px;
             background-color: rgba(255, 255, 255, 0.9);
-            padding: 20px 0 30px 0;
+            padding: 30px 30px;
+            width: 90%;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
         }
 
         /* style inputs and link buttons */
@@ -60,23 +66,10 @@
         }
 
         /* Two-column layout */
-        .col {
-            float: left;
-            width: 100%;
-            padding: 0 50px;
-            margin: 6px auto auto;
-        }
-
-        /* Clear floats after the columns */
         .row {
-            display: table;
-            clear: both;
-            left: 25%;
-            padding: 0 50px;
-        }
-
-        .main {
-            margin: 7% 28%;
+            margin-top: 16%;
+            margin-bottom: 10%;
+            margin-right: 0;
         }
 
         @media screen and (max-width: 1000px) {
@@ -93,19 +86,22 @@
     </style>
 </head>
 <body>
-<div class="main">
-    <div class="col">
-        <img src="{% static "img/main.png" %}" width="735" height="280">
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-5">
+        <img src="{% static "img/main.png" %}">
+    </div>
+    <div class="col-sm-5">
         <div class="container">
-            <form action="#">
-                <div class="row">
+            <form method="post">
+                {% csrf_token %}
                     <h2 style="text-align:center">Welcome to Doc-To</h2>
                     <input type="text" name="username" placeholder="Username" required>
                     <input type="password" name="password" placeholder="Password" required>
                     <input type="submit" value="Login">
                     <!-- <h4 style="color:red; text-align:center">Wrong Username or Password. Please Try Again</h4>-->
 
-                </div>
+
             </form>
         </div>
     </div>
