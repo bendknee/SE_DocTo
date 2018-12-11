@@ -12,7 +12,7 @@ def openConsul(request):
     response['consul_form'] = ConsulForm
     return render(request, html, response)
 
-@login_requireds
+@login_required
 def detailConsul(request):
     form = ConsulForm(request.POST or None)
     if(request.method == 'POST' and form.is_valid()):
