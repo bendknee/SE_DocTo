@@ -55,7 +55,7 @@
 	function alasanBatal() {
 		var person = prompt("Alasan membatalkan (kosongkan jika tidak ingin memberi alasan):");
 		if (person != null) {
-			window.location.href = "{% url 'patient_list' %}";
+			window.location.href = "{% url 'delete-consul' consultation_pk=consultation.pk %}";
 		}
 	}
 	</script>

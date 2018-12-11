@@ -33,3 +33,10 @@ def showDetail(request, pk):
     patient = Patient.objects.get(pk=pk)
     consultation = Consul_Patient.objects.get(patient__pk=pk)
     return render(request, 'patient_list/detail.html', {'patient':patient, 'consultation':consultation})
+	
+@login_required
+def delete(request, consultation_pk):
+	consultation = Consul_Patient.objects.get(patient__pk=pk)
+	query = consultation.objects.get(pk=consultation_pk)
+	query.delete()
+	return redirect('patient_list')
