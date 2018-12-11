@@ -8,7 +8,11 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
+<<<<<<< HEAD
 
+=======
+#@login_required
+>>>>>>> 2cf88b598ecf9a3bcd94db21e8d5f5651f142d9e
 def create_models_hari():
     num = Hari.objects.all().count()
     if num != 7:
@@ -17,7 +21,11 @@ def create_models_hari():
             tambah = Hari.objects.create(name=item)
             tambah.save()
 
+<<<<<<< HEAD
 @login_required        
+=======
+#@login_required        
+>>>>>>> 2cf88b598ecf9a3bcd94db21e8d5f5651f142d9e
 def jadwal_praktik_senin(request):
     create_models_hari()
     status = Hari.objects.get(name='Senin')
@@ -29,7 +37,11 @@ def jadwal_praktik_senin(request):
     else:
         return render(request,'freeze1.html',response)
 
+<<<<<<< HEAD
 @login_required
+=======
+#@login_required
+>>>>>>> 2cf88b598ecf9a3bcd94db21e8d5f5651f142d9e
 def jadwal_praktik_selasa(request):
     create_models_hari()
     status = Hari.objects.get(name='Selasa')
@@ -41,7 +53,11 @@ def jadwal_praktik_selasa(request):
     else:
         return render(request, 'freeze2.html',response)
     
+<<<<<<< HEAD
 @login_required
+=======
+#@login_required
+>>>>>>> 2cf88b598ecf9a3bcd94db21e8d5f5651f142d9e
 def jadwal_praktik_rabu(request):
     create_models_hari()
     status = Hari.objects.get(name='Rabu')
@@ -54,7 +70,11 @@ def jadwal_praktik_rabu(request):
     else:
         return render(request, 'freeze3.html',response)
 
+<<<<<<< HEAD
 @login_required    
+=======
+#@login_required    
+>>>>>>> 2cf88b598ecf9a3bcd94db21e8d5f5651f142d9e
 def jadwal_praktik_kamis(request):
     create_models_hari()
     status = Hari.objects.get(name='Kamis')
@@ -66,7 +86,11 @@ def jadwal_praktik_kamis(request):
     else:
          return render(request,'freeze4.html',response)
 
+<<<<<<< HEAD
 @login_required        
+=======
+#@login_required        
+>>>>>>> 2cf88b598ecf9a3bcd94db21e8d5f5651f142d9e
 def jadwal_praktik_jumat(request):
     create_models_hari()
     status = Hari.objects.get(name='Jumat')
@@ -79,7 +103,11 @@ def jadwal_praktik_jumat(request):
     else:
          return render(request,'freeze5.html',response)
 
+<<<<<<< HEAD
 @login_required        
+=======
+#@login_required        
+>>>>>>> 2cf88b598ecf9a3bcd94db21e8d5f5651f142d9e
 def jadwal_praktik_sabtu(request):
     create_models_hari()
     status = Hari.objects.get(name='Sabtu')
@@ -91,7 +119,11 @@ def jadwal_praktik_sabtu(request):
     else:
          return render(request,'freeze6.html',response)
 
+<<<<<<< HEAD
 @login_required       
+=======
+#@login_required       
+>>>>>>> 2cf88b598ecf9a3bcd94db21e8d5f5651f142d9e
 def jadwal_praktik_minggu(request):
     create_models_hari()
     status = Hari.objects.get(name='Minggu')
@@ -103,7 +135,11 @@ def jadwal_praktik_minggu(request):
     else:
          return render(request,'freeze7.html',response)
 
+<<<<<<< HEAD
 @login_required
+=======
+#@login_required
+>>>>>>> 2cf88b598ecf9a3bcd94db21e8d5f5651f142d9e
 def freeze1(request):
     value = Hari.objects.get(name='Senin')
     value.statusActive = False
@@ -111,7 +147,11 @@ def freeze1(request):
     response = {}
     return render(request,'freeze1.html', response)
 
+<<<<<<< HEAD
 @login_required
+=======
+#@login_required
+>>>>>>> 2cf88b598ecf9a3bcd94db21e8d5f5651f142d9e
 def freeze2(request):
     value = Hari.objects.get(name='Selasa')
     value.statusActive = False
@@ -119,7 +159,11 @@ def freeze2(request):
     response = {}
     return render(request,'freeze2.html', response)
 
+<<<<<<< HEAD
 @login_required
+=======
+#@login_required
+>>>>>>> 2cf88b598ecf9a3bcd94db21e8d5f5651f142d9e
 def freeze3(request):
     value = Hari.objects.get(name = 'Rabu')
     value.statusActive = False
@@ -127,7 +171,11 @@ def freeze3(request):
     response = {}
     return render (request, 'freeze3.html', response)
 
+<<<<<<< HEAD
 @login_required    
+=======
+#@login_required    
+>>>>>>> 2cf88b598ecf9a3bcd94db21e8d5f5651f142d9e
 def freeze4(request):
     value = Hari.objects.get(name = 'Kamis')
     value.statusActive = False
@@ -135,7 +183,11 @@ def freeze4(request):
     response = {}
     return render(request, 'freeze4.html', response)
 
+<<<<<<< HEAD
 @login_required
+=======
+#@login_required
+>>>>>>> 2cf88b598ecf9a3bcd94db21e8d5f5651f142d9e
 def freeze5(request):
     value = Hari.objects.get(name = 'Jumat')
     value.statusActive = False
@@ -143,7 +195,11 @@ def freeze5(request):
     response = {}
     return render(request, 'freeze5.html', response)
 
+<<<<<<< HEAD
 @login_required    
+=======
+#@login_required    
+>>>>>>> 2cf88b598ecf9a3bcd94db21e8d5f5651f142d9e
 def freeze6(request):
     value = Hari.objects.get(name = 'Sabtu')
     value.statusActive = False
@@ -151,7 +207,11 @@ def freeze6(request):
     response = {}
     return render(request, 'freeze6.html', response)
 
+<<<<<<< HEAD
 @login_required
+=======
+#@login_required
+>>>>>>> 2cf88b598ecf9a3bcd94db21e8d5f5651f142d9e
 def freeze7(request):
     value = Hari.objects.get(name = 'Minggu')
     value.statusActive = False
@@ -159,7 +219,11 @@ def freeze7(request):
     response = {}
     return render(request, 'freeze7.html', response)
 
+<<<<<<< HEAD
 @login_required
+=======
+#@login_required
+>>>>>>> 2cf88b598ecf9a3bcd94db21e8d5f5651f142d9e
 def aktif1(request):
     value = Hari.objects.get(name = 'Senin')
     value.statusActive = True
@@ -169,7 +233,11 @@ def aktif1(request):
     response['data'] = data
     return render(request, 'kelola_jadwal_1.html',response)
 
+<<<<<<< HEAD
 @login_required
+=======
+#@login_required
+>>>>>>> 2cf88b598ecf9a3bcd94db21e8d5f5651f142d9e
 def aktif2(request):
     value = Hari.objects.get(name = 'Selasa')
     value.statusActive = True
@@ -179,7 +247,11 @@ def aktif2(request):
     response['data'] = data
     return render(request, 'kelola_jadwal_2.html',response)
 
+<<<<<<< HEAD
 @login_required
+=======
+#@login_required
+>>>>>>> 2cf88b598ecf9a3bcd94db21e8d5f5651f142d9e
 def aktif3(request):
     value = Hari.objects.get(name = 'Rabu')
     value.statusActive = True
@@ -189,7 +261,11 @@ def aktif3(request):
     response['data'] = data
     return render(request, 'kelola_jadwal_3.html',response)
 
+<<<<<<< HEAD
 @login_required
+=======
+#@login_required
+>>>>>>> 2cf88b598ecf9a3bcd94db21e8d5f5651f142d9e
 def aktif4(request):
     value = Hari.objects.get(name = 'Kamis')
     value.statusActive = True
@@ -199,7 +275,11 @@ def aktif4(request):
     response['data'] = data
     return render(request, 'kelola_jadwal_4.html',response)
 
+<<<<<<< HEAD
 @login_required
+=======
+#@login_required
+>>>>>>> 2cf88b598ecf9a3bcd94db21e8d5f5651f142d9e
 def aktif5(request):
     value = Hari.objects.get(name = 'Jumat')
     value.statusActive = True
@@ -209,7 +289,11 @@ def aktif5(request):
     response['data'] = data
     return render(request, 'kelola_jadwal_5.html',response)
 
+<<<<<<< HEAD
 @login_required
+=======
+#@login_required
+>>>>>>> 2cf88b598ecf9a3bcd94db21e8d5f5651f142d9e
 def aktif6(request):
     value = Hari.objects.get(name = 'Sabtu')
     value.statusActive = True
@@ -219,7 +303,11 @@ def aktif6(request):
     response['data'] = data
     return render(request, 'kelola_jadwal_6.html',response)
 
+<<<<<<< HEAD
 @login_required
+=======
+#@login_required
+>>>>>>> 2cf88b598ecf9a3bcd94db21e8d5f5651f142d9e
 def aktif7(request):
     value = Hari.objects.get(name = 'Minggu')
     value.statusActive = True
@@ -229,7 +317,11 @@ def aktif7(request):
     response['data'] = data
     return render(request, 'kelola_jadwal_7.html',response)
 
+<<<<<<< HEAD
 @login_required
+=======
+#@login_required
+>>>>>>> 2cf88b598ecf9a3bcd94db21e8d5f5651f142d9e
 def hapus1(request,id):
     value = Consul.objects.get(id = id)
     value.delete()
@@ -238,7 +330,10 @@ def hapus1(request,id):
     response['data'] = data
     return render(request,'kelola_jadwal_1.html',response)
 
+<<<<<<< HEAD
 @login_required
+=======
+>>>>>>> 2cf88b598ecf9a3bcd94db21e8d5f5651f142d9e
 def hapus2(request,id):
     value = Consul.objects.get(id = id)
     value.delete()
@@ -247,7 +342,10 @@ def hapus2(request,id):
     response['data'] = data
     return render(request,'kelola_jadwal_2.html',response)
 
+<<<<<<< HEAD
 @login_required
+=======
+>>>>>>> 2cf88b598ecf9a3bcd94db21e8d5f5651f142d9e
 def hapus3(request,id):
     value = Consul.objects.get(id = id)
     value.delete()
@@ -256,7 +354,10 @@ def hapus3(request,id):
     response['data'] = data
     return render(request,'kelola_jadwal_3.html',response)
 
+<<<<<<< HEAD
 @login_required	
+=======
+>>>>>>> 2cf88b598ecf9a3bcd94db21e8d5f5651f142d9e
 def hapus4(request,id):
     value = Consul.objects.get(id = id)
     value.delete()
@@ -265,7 +366,10 @@ def hapus4(request,id):
     response['data'] = data
     return render(request,'kelola_jadwal_4.html',response)
 
+<<<<<<< HEAD
 @login_required	
+=======
+>>>>>>> 2cf88b598ecf9a3bcd94db21e8d5f5651f142d9e
 def hapus5(request,id):
     value = Consul.objects.get(id = id)
     value.delete()
@@ -274,7 +378,10 @@ def hapus5(request,id):
     response['data'] = data
     return render(request,'kelola_jadwal_5.html',response)
 
+<<<<<<< HEAD
 @login_required	
+=======
+>>>>>>> 2cf88b598ecf9a3bcd94db21e8d5f5651f142d9e
 def hapus6(request,id):
     value = Consul.objects.get(id = id)
     value.delete()
@@ -283,7 +390,10 @@ def hapus6(request,id):
     response['data'] = data
     return render(request,'kelola_jadwal_6.html',response)
 
+<<<<<<< HEAD
 @login_required	
+=======
+>>>>>>> 2cf88b598ecf9a3bcd94db21e8d5f5651f142d9e
 def hapus7(request,id):
     value = Consul.objects.get(id = id)
     value.delete()

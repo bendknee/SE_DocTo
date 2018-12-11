@@ -1,5 +1,9 @@
 from django.conf.urls import url
+<<<<<<< HEAD
 from .views import jadwal_praktik_senin,jadwal_praktik_selasa,jadwal_praktik_rabu,jadwal_praktik_kamis,jadwal_praktik_jumat,jadwal_praktik_sabtu,jadwal_praktik_minggu,freeze1,freeze2,freeze3,freeze4,freeze5,freeze6,freeze7,aktif1,aktif2,aktif3,aktif4,aktif5,aktif6,aktif7,hapus1,hapus2,hapus3,hapus4,hapus5,hapus6,hapus7
+=======
+from .views import jadwal_praktik_senin,jadwal_praktik_selasa,jadwal_praktik_rabu,jadwal_praktik_kamis,jadwal_praktik_jumat,jadwal_praktik_sabtu,jadwal_praktik_minggu,freeze1,freeze2,freeze3,freeze4,freeze5,freeze6,freeze7,aktif1,aktif2,aktif3,aktif4,aktif5,aktif6,aktif7
+>>>>>>> 2cf88b598ecf9a3bcd94db21e8d5f5651f142d9e
 import sys
 sys.path.append('../')
 from open_consul.views import openConsul
@@ -29,6 +33,7 @@ urlpatterns = [
         url(r'^active-jumat',  aktif5, name='aktif5'),
         url(r'^active-sabtu',  aktif6, name='aktif6'),
         url(r'^active-minggu',  aktif7, name='aktif7'),
+<<<<<<< HEAD
 		url(r'^hapus-senin/(?P<id>.*)/$', hapus1, name='hapus1'),
 		url(r'^hapus-selasa/(?P<id>.*)/$', hapus2, name='hapus2'),
 		url(r'^hapus-rabu/(?P<id>.*)/$', hapus3, name='hapus3'),
@@ -36,4 +41,6 @@ urlpatterns = [
 		url(r'^hapus-jumat/(?P<id>.*)/$', hapus5, name='hapus5'),
 		url(r'^hapus-sabtu/(?P<id>.*)/$', hapus6, name='hapus6'),
 		url(r'^hapus-minggu/(?P<id>.*)/$', hapus7, name='hapus7'),
+=======
+>>>>>>> 2cf88b598ecf9a3bcd94db21e8d5f5651f142d9e
     ]
