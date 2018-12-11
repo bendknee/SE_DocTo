@@ -1,0 +1,106 @@
+{% load  static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>
+        DocTo - Log in
+    </title>
+    <style>
+        body {
+            font-family: Century Gothic, sans-serif;
+            background-color: #ca009d;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* style the container */
+        .container {
+            border-radius: 40px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px 30px;
+            width: 90%;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* style inputs and link buttons */
+        input {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            margin: 8px 0;
+            opacity: 0.85;
+            display: inline-block;
+            font-size: 20px;
+            line-height: 20px;
+            text-decoration: none; /* remove underline from anchors */
+            text-align: center;
+        }
+
+        input:hover {
+            opacity: 1;
+        }
+
+        input[type=text], input[type=password] {
+            background: linear-gradient(to right, #919191, #919191) 5px calc(100% - 5px)/calc(100% - 10px) 2px no-repeat;
+            background-color: transparent;
+        }
+        /* style the submit button */
+        input[type=submit] {
+            background: revert;
+            background-color: #ca009d;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #8e1c71;
+        }
+
+        /* Two-column layout */
+        .row {
+            margin-top: 16%;
+            margin-bottom: 10%;
+            margin-right: 0;
+        }
+
+    </style>
+</head>
+<body>
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-5">
+        <img src="{% static "img/main.png" %}">
+    </div>
+    <div class="col-sm-5">
+        <div class="container">
+            <form method="post">
+                {% csrf_token %}
+                    <h2 style="text-align:center">Welcome to Doc-To</h2>
+                    <input type="text" name="username" placeholder="Username" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <input type="submit" value="Login">
+                    {% if form.errors %}
+                    <div class="alert alert-danger" style="text-align: center">
+                        Wrong Username/Password!
+                    </div>
+                    {% endif %}
+
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+
+<!--#BB1D9D-->

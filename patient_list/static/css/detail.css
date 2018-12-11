@@ -1,0 +1,44 @@
+.card {
+    /* position: relative; */
+    margin: auto;
+    width: 70vw;
+    height: 75vh;
+    background-color: white;
+    
+}
+
+.btn-primary {
+    background-color: #d312ca !important;
+    border-color: #d312ca !important;
+    
+}
+
+.card-header {
+    color: #d312ca;
+    text-align: center;
+}
+
+.card-body {
+    margin: 20px;
+    font-size: 25px;
+}
+
+.table {
+    margin-top: 40px;
+    margin-left: 22%;
+}
+
+.titik2 {
+    width: 25%;
+}
+
+td {
+    height: 75px;
+}
+
+.theader {
+    font-weight: bold;
+}
+
+
+

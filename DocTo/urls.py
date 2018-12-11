@@ -13,10 +13,19 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf.urls import url
 from django.contrib import admin
+from django.contrib.auth import views as auth_views
 from django.urls import path, include
+from django.views.generic.base import RedirectView
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    url(r'^login/$', auth_views.LoginView.as_view(), name='login'),
+    url(r'^logout/$', auth_views.LogoutView.as_view(), name='logout'),
+    path('', RedirectView.as_view(url='/patient/'), name='redirect'),
+    path('patient/', include('patient_list.urls')),
+    url(r'^jadwal-praktik/', include(('jadwal_praktik.urls', 'jadwal_praktik'), namespace='jadwal-praktik')),
     path('open-consul/', include('open_consul.urls', namespace='open_consul'))
 ]
