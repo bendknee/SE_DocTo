@@ -31,7 +31,6 @@ def jadwal_praktik_senin(request):
 
 
 @login_required
->>>>>>> 2cf88b598ecf9a3bcd94db21e8d5f5651f142d9e
 def jadwal_praktik_selasa(request):
     create_models_hari()
     status = Hari.objects.get(name='Selasa')
