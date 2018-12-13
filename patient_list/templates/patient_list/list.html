@@ -16,7 +16,7 @@
                       <h5 class="card-header">Selesai</h5>
                       {% endif %}
                       <div class="card-body">
-                        <h5 class="card-title"><a href="{% url 'patient_detail' pk=consultation.patient.pk %}">{{ consultation.patient.name }}</a></h5>
+                        <h5 class="card-title"><a href="{% url 'patient_detail' pk=consultation.pk %}">{{ consultation.patient.name }}</a></h5>
                         <p class="card-text">Konsultasi pada hari {{ consultation.consultation.hariPraktik }} dan pukul {{ consultation.consultation.jamMulai }} wib.</p>
                         <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
                       </div>
