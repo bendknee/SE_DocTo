@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Patient, Consul_Patient
 from django.contrib.auth.decorators import login_required
 
@@ -8,7 +8,6 @@ def showList(request):
     user = request.user
     consultations = Consul_Patient.objects.filter(consultation__dokter__username = user).order_by('-status')
     value = request.GET.get('search')
-    print(value)
     if value:
         consultations = consultations.filter(patient__name__icontains = value)
     return render(request, 'patient_list/list.html', {'consultations': consultations})
@@ -30,6 +29,12 @@ def orderBy(request):
 
 @login_required
 def showDetail(request, pk):
-    patient = Patient.objects.get(pk=pk)
-    consultation = Consul_Patient.objects.get(patient__pk=pk)
+    consultation = Consul_Patient.objects.get(pk=pk)
+    patient = consultation.patient
     return render(request, 'patient_list/detail.html', {'patient':patient, 'consultation':consultation})
+	
+@login_required
+def delete(request, pk):
+	query = Consul_Patient.objects.get(pk=pk)
+	query.delete()
+	return redirect('patient_list')
