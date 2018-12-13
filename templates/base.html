@@ -24,7 +24,7 @@
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Konsultasi</a>
+                    <a class="nav-link" href="{% url 'open_consul:open-consul' %}">Konsultasi</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Jadwal</a>
@@ -33,7 +33,7 @@
                     <a class="nav-link" href="{% url 'patient_list' %}">Pasien</a>
                 </li>
             </ul>
-                <a class="btn btn-success my-0 my-sm-0" href="{% url 'logout' %}" style="color: #ffffff">Logout</a>
+                <a id="logout" class="btn btn-success my-0 my-sm-0" href="{% url 'logout' %}" style="color: #ffffff">Logout</a>
         </div>
     </nav>
       {% block content %}
@@ -42,5 +42,12 @@
       <footer class="footer fixed-bottom">
         &copy; Kelompok B3 RPL
       </footer>
+<script>
+    $(function(){
+        $('a#logout').click(function(){
+            return confirm('Are you sure want to logout?');
+        });
+    });
+</script>
 </body>
 </html>

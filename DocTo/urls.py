@@ -26,6 +26,6 @@ urlpatterns = [
     url(r'^logout/$', auth_views.LogoutView.as_view(), name='logout'),
     path('', RedirectView.as_view(url='/patient/'), name='redirect'),
     path('patient/', include('patient_list.urls')),
-    url(r'^jadwal-praktik/', include(('jadwal_praktik.urls', 'jadwal_praktik'), namespace='jadwal-praktik_1')),
-    path('open-consul/', include('open_consul.urls', namespace='open_consul'))
+    url(r'^jadwal-praktik/', include(('jadwal_praktik.urls', 'jadwal_praktik'), namespace='jadwal-praktik')),
+    path('open-consul/', include('open_consul.urls'))
 ]
